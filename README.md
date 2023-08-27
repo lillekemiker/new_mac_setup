@@ -73,3 +73,11 @@ curl http://j.mp/spf13-vim3 -L -o - | sh
 
 https://code.visualstudio.com/download
 
+## Configure git
+
+Add the following to `~/.gitconfig` to avoid "pager" behavior if output fits on screen:
+(https://stackoverflow.com/questions/48341920/git-branch-command-behaves-like-less)
+```
+[core]
+    pager = less -FRX
+```
