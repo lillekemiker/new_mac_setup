@@ -28,3 +28,37 @@ Installing a python version
 ```sh
 pyenv install 3.10.12
 ```
+
+## Git SSH keys
+```sh
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+and add contents of `.ssh/id_ed25519.pub` to github/gitlab keys
+
+## Install git-lfs
+
+Note: Currently the steps below do not work for Amazon Linux. Scroll down for fix.
+
+https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md
+
+
+At the time of writing, the following command claims to successfully add the repo
+```sh
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh | sudo bash
+```
+
+But it fails to install the package claiming it does't exist when running
+```sh
+sudo yum install git-lfs
+```
+
+### Amazon Linux git-lfs
+
+The following seems to do the trick
+
+```sh
+amazon-linux-extras install epel -y
+yum-config-manager --enable epel
+yum install git-lfs
+```
