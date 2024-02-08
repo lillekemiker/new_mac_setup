@@ -19,6 +19,30 @@ sudo yum groupinstall "Development Tools" -y && \
     xz-devel
 ```
 
+If using Ubuntu, install dependencies like so
+
+```sh
+apt install -y \
+  make \
+  build-essential \
+  libssl-dev \
+  zlib1g-dev \
+  libbz2-dev \
+  libreadline-dev \
+  libsqlite3-dev \
+  wget \
+  curl \
+  llvm \
+  libncurses5-dev \
+  libncursesw5-dev \
+  xz-utils \
+  tk-dev \
+  libffi-dev \
+  liblzma-dev \
+  python-openssl \
+  git
+```
+
 Installing pyenv with pyenv-virtualenv
 ```sh
 curl https://pyenv.run | bash
