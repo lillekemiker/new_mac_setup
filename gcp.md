@@ -11,3 +11,9 @@ sudo /opt/deeplearning/install-driver.sh
 sudo yum install git-lfs
 git lfs install
 ```
+
+# Deactivate Conda
+
+```
+conda config --set auto_activate_base false
+```
